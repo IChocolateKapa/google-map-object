@@ -48,12 +48,6 @@ define(['jquery'], function($){
                 $(".modal").hide();
                 $(".modal").remove();
             })
-        },
-        confirm: function(msg){
-            //alert(msg);
-        },
-        prompt: function(msg){
-            //alert(msg);
         }
     }
 

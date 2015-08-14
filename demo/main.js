@@ -8,13 +8,13 @@ require.config({
         jquery: '../js/lib/jquery-2.1.3.min',
         /*千万注意不能后面加.js后缀*/
         mapController: '../js/src/mapController',
-        mapIndex: '../js/src/mapIndex',
-        window: '../js/src/window'
+        window: '../js/src/window',
+        mapIndex: '../js/src/mapIndex'
     }
 });
 
 
-require(["jquery", 'window'], function($, w){
+require(['jquery', 'window'], function($, w){
     $("#phone").click(function(){
         new w.window().alert("手机号", "18612552963", {
                 "width": 400,

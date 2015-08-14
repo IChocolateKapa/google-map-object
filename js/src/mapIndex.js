@@ -2,7 +2,7 @@
  * Created by Echo on 2015/8/10.
  */
 
-define(function () {
+define(['jquery'], function ($) {
 
     var init = function () {};
 
@@ -97,8 +97,15 @@ define(function () {
                 $("#_poly").hide();
                 $("#_rect").show();
                 google.maps.event.addListener(rectangle, 'dblclick', function () {
+                    var obj = this;
                     GLOBAL_MapParams.overlayArray.deleteFromArray(GLOBAL_MapParams.rectArray, this);
-
+                    if(GLOBAL_MapParams.rectArray.length == 0){
+                        $("#_rect").hide();
+                        if(obj.marray){
+                            MAP.clearMarkers(obj.marray);
+                            obj.marray = [];
+                        }
+                    }
                 });
                 GLOBAL_MapParams.drawingManager.setDrawingMode(null);
             });
@@ -114,7 +121,6 @@ define(function () {
                 GLOBAL_MapParams.markerArray.push(marker);
                 google.maps.event.addListener(marker, 'dblclick', function () {
                     GLOBAL_MapParams.overlayArray.deleteFromArray(GLOBAL_MapParams.markerArray, this);
-
                 });
                 //GLOBAL_MapParams.drawingManager.setDrawingMode(null);
 
@@ -124,7 +130,15 @@ define(function () {
                 $("#_rect").hide();
                 $("#_poly").show();
                 google.maps.event.addListener(poly, 'dblclick', function () {
+                    var obj = this;
                     GLOBAL_MapParams.overlayArray.deleteFromArray(GLOBAL_MapParams.polylineArray, this);
+                    if(GLOBAL_MapParams.polylineArray.length == 0){
+                        $("#_poly").hide();
+                        if(obj.markerList){
+                            MAP.clearMarkers(obj.markerList);
+                            obj.markerList = [];
+                        }
+                    }
                 });
                 GLOBAL_MapParams.drawingManager.setDrawingMode(null);
             });

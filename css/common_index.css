@@ -100,8 +100,8 @@ input{
 ._chbx{
     width: 15px;
     height: 15px;
-    background: url("../../static/images/componnets/checkbox.png") -2px -33.5px no-repeat;
+    background: url("../images/componnets/checkbox.png") -2px -33.5px no-repeat;
 }
 ._nologin{
-    background: url("../../static/images/componnets/checkbox.png") -1px -50px;
+    background: url("../images/componnets/checkbox.png") -1px -50px;
 }

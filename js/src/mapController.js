@@ -2,8 +2,7 @@
  * Created by Administrator on 2015/8/7.
  */
 
-
-define(['jquery', '/mapIndex'], function ($, mp) {
+define(['jquery', 'mapIndex'], function ($, mp) {
 
     GLOBAL_MapParams.addrId = "address";
     GLOBAL_MapParams.mapId = "mapCanvas";
