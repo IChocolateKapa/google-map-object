@@ -13,7 +13,7 @@ define(['jquery', 'mapIndex'], function ($, mp) {
         init.initialize(true);
     });
 
-})
+});
 
 function searchKeyPress(event){
     eventUtil.enterKeyPress(event, function(){

@@ -6,7 +6,7 @@ require.config({
     //baseUrl: "",
     paths: {
         jquery: '../js/lib/jquery-2.1.3.min',
-        /*Ç§Íò×¢Òâ²»ÄÜºóÃæ¼Ó.jsºó×º*/
+        /*åƒä¸‡æ³¨æ„ä¸èƒ½åé¢åŠ .jsåç¼€*/
         mapController: '../js/src/mapController',
         window: '../js/src/window',
         mapIndex: '../js/src/mapIndex'
@@ -16,7 +16,7 @@ require.config({
 
 require(['jquery', 'window'], function($, w){
     $("#phone").click(function(){
-        new w.window().alert("ÊÖ»úºÅ", "18612552963", {
+        new w.window().alert("æ‰‹æœºå·", "18612552963", {
                 "width": 400,
                 "height": 120,
                 "x": '50%',
@@ -40,11 +40,11 @@ require(["mapController"]);
 
 
 require(['jquery', 'mapIndex', 'window'], function($, mp, w){
-    //¶¯Ì¬µ÷ÕûµØÍ¼¸ß¶È
+    //åŠ¨æ€è°ƒæ•´åœ°å›¾é«˜åº¦
     var h = $(window).height() - $(".header").height() - 3;
     $(".content").height(h);
 
-    /*Ô¤ÀÀtoggle*/
+    /*é¢„è§ˆtoggle*/
     $(".staylogin").click(function () {
         $("._chbx").toggleClass("_nologin");
     })
@@ -69,13 +69,13 @@ require(['jquery', 'mapIndex', 'window'], function($, mp, w){
         init.foreSeePolysMarkers();
     })
 
-    /*ÊäÈëµØÖ·×ªµ½ÏàÓ¦Î»ÖÃ*/
+    /*è¾“å…¥åœ°å€è½¬åˆ°ç›¸åº”ä½ç½®*/
     $("#search").click(function () {
         MAP.codeAddress(GLOBAL_MapParams.geocoder, GLOBAL_MapParams.map, GLOBAL_MapParams.addrId);
     })
 
 
-    /*Ë¢ĞÂµØÍ¼*/
+    /*åˆ·æ–°åœ°å›¾*/
     $("#refresh").click(function () {
         init.initialize(true);
         MAP.setCusMap(GLOBAL_MapParams.rectArray, GLOBAL_MapParams.map);
