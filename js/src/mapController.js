@@ -13,6 +13,12 @@ define(['jquery', 'mapIndex'], function ($, mp) {
         init.initialize(true);
     });
 
+
+    var testAA = function(){
+        alert(GLOBAL_MapParams.mapId);
+    };
+
+    return {mm: testAA};
 });
 
 function searchKeyPress(event){

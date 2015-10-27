@@ -70,12 +70,31 @@
         </div>
     </div>
 
+
     <script src="http://ditu.google.cn/maps/api/js?sensor=false&libraries=drawing"></script>
     <script src="../js/src/mapOption.js"></script>
     <script src="../js/lib/require.js" data-main="../demo/main"></script>
+    <script>
+        require.config({
+            //baseUrl: "",
+            paths: {
+                jquery: '../js/lib/jquery-2.1.3.min',
+                /*千万注意不能后面加.js后缀*/
+                mapController: '../js/src/mapController',
+                window: '../js/src/window',
+                mapIndex: '../js/src/mapIndex'
+            }
+        });
+
+    </script>
     <script src="../js/src/eventUtil.js"></script>
     <script src="../js/src/mapWSJ.js"></script>
 
+    <script>
+        require(['mapController', 'jquery'], function(mm, $){
+            mm.mm();
+        })
+    </script>
 
 </body>
 </html>

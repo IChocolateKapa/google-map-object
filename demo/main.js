@@ -2,18 +2,6 @@
  * Created by Echo on 2015/8/10.
  */
 
-require.config({
-    //baseUrl: "",
-    paths: {
-        jquery: '../js/lib/jquery-2.1.3.min',
-        /*千万注意不能后面加.js后缀*/
-        mapController: '../js/src/mapController',
-        window: '../js/src/window',
-        mapIndex: '../js/src/mapIndex'
-    }
-});
-
-
 require(['jquery', 'window'], function($, w){
     $("#phone").click(function(){
         new w.window().alert("手机号", "18612552963", {
